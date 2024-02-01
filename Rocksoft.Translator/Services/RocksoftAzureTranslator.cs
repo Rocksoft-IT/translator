@@ -26,7 +26,12 @@ internal class RocksoftAzureTranslator : IRocksoftTranslator
     {
         var cultures = CultureInfo.GetCultures(CultureTypes.AllCultures);
 
-        var cultureInfo = cultures.FirstOrDefault(c => c.EnglishName.Contains(languageName));
+        
+        char[] l = languageName.ToCharArray();
+        l[0] = char.ToUpper(l[0]);
+        var language = new string(l);
+        
+        var cultureInfo = cultures.FirstOrDefault(c => c.EnglishName.Contains(language));
 
         if (cultureInfo == null)
         {

@@ -30,7 +30,7 @@ public class RocksoftAzureTranslatorTests
         var rocksoftTranslator = serviceProvider.GetRequiredService<RocksoftAzureTranslator>();
         
         // Act
-        var translation = await rocksoftTranslator.Translate("Test", "English", "Polish");
+        var translation = await rocksoftTranslator.Translate("Test", "english", "polish");
         
         // Assert
         translation.Should().NotBeEmpty();
