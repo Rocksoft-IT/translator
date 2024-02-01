@@ -4,9 +4,14 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <EnablePackageValidation>true</EnablePackageValidation>
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="DotNet.ReproducibleBuilds" Version="1.1.1">
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        <PrivateAssets>all</PrivateAssets>
+      </PackageReference>
       <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
       <PackageReference Include="MinVer" Version="4.3.0">
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -17,5 +22,5 @@
     <ItemGroup>
       <ProjectReference Include="..\Rocksoft.Translator.Integrations.AzureAiTranslator\Rocksoft.Translator.Integrations.AzureAiTranslator.csproj" />
     </ItemGroup>
-
+    
 </Project>
