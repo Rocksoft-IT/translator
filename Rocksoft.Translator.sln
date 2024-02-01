@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocksoft.Translator", "Rocksoft.Translator\Rocksoft.Translator.csproj", "{13B3B4D4-3CA6-49CD-955F-7A9848BDA4E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocksoft.Translator.Integrations.AzureAiTranslator", "Rocksoft.Translator.Integrations.AzureAiTranslator\Rocksoft.Translator.Integrations.AzureAiTranslator.csproj", "{F22015C5-0BBA-446F-B6A1-EEFC81A696DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{723E0041-5316-4A45-BBD0-EC14A8820C4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocksoft.Translator.Tests", "Rocksoft.Translator.Tests\Rocksoft.Translator.Tests.csproj", "{C208A0CC-006C-4F0A-9517-7EF33CC7BF23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13B3B4D4-3CA6-49CD-955F-7A9848BDA4E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13B3B4D4-3CA6-49CD-955F-7A9848BDA4E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13B3B4D4-3CA6-49CD-955F-7A9848BDA4E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13B3B4D4-3CA6-49CD-955F-7A9848BDA4E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F22015C5-0BBA-446F-B6A1-EEFC81A696DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F22015C5-0BBA-446F-B6A1-EEFC81A696DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F22015C5-0BBA-446F-B6A1-EEFC81A696DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F22015C5-0BBA-446F-B6A1-EEFC81A696DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C208A0CC-006C-4F0A-9517-7EF33CC7BF23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C208A0CC-006C-4F0A-9517-7EF33CC7BF23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C208A0CC-006C-4F0A-9517-7EF33CC7BF23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C208A0CC-006C-4F0A-9517-7EF33CC7BF23}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C208A0CC-006C-4F0A-9517-7EF33CC7BF23} = {723E0041-5316-4A45-BBD0-EC14A8820C4A}
+	EndGlobalSection
+EndGlobal
