@@ -1,1 +1,2 @@
-# translator
+# translation-service
+Rocksoft translation service 
