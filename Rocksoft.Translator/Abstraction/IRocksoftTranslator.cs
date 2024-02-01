@@ -1,6 +1,6 @@
 namespace Rocksoft.Translator.Abstraction;
 
-public class IRocksoftTranslator
+public interface IRocksoftTranslator
 {
-    
+    Task<string> Translate(string text, string sourceLanguage, string destinationLanguage);
 }
