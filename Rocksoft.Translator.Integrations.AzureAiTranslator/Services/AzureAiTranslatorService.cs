@@ -6,7 +6,7 @@ namespace Rocksoft.Translator.Integrations.AzureAiTranslator.Services;
 internal class AzureAiTranslatorService : IAzureAiTranslatorService
 {
     private readonly AzureAiTranslatorClient _client;
-    
+
     public AzureAiTranslatorService(AzureAiTranslatorClient client)
     {
         _client = client;
@@ -15,7 +15,7 @@ internal class AzureAiTranslatorService : IAzureAiTranslatorService
     public async Task<string> Translate(string text, string sourceLanguageCode, string destinationLanguageCode)
     {
         await ValidateLanguages(sourceLanguageCode, destinationLanguageCode);
-        
+
         var request = new List<TranslationRequest>
         {
             new TranslationRequest
@@ -33,12 +33,16 @@ internal class AzureAiTranslatorService : IAzureAiTranslatorService
     {
         var supportedLanguages = (await _client.GetSupportedLanguages()).Languages;
 
-        if (supportedLanguages.Keys.All(l => l != sourceLanguageCode))
+        var codeSeparator = '-';
+
+        if (supportedLanguages.Keys.All(l =>
+                l.Contains(codeSeparator) ? l.Split('-')[0] != sourceLanguageCode : l != sourceLanguageCode))
         {
             throw new Exception("Source language not supported");
         }
-        
-        if (supportedLanguages.Keys.All(l => l != destinationLanguageCode))
+
+        if (supportedLanguages.Keys.All(l =>
+                l.Contains(codeSeparator) ? l.Split('-')[0] != sourceLanguageCode : l != sourceLanguageCode))
         {
             throw new Exception("Destination language not supported");
         }
