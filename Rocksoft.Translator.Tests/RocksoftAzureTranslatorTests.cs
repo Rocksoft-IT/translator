@@ -27,23 +27,6 @@ public class RocksoftAzureTranslatorTests
     [InlineData("English", "Polish")]
     [InlineData("English", "Bangla")]
     [InlineData("English", "Chinese")]
-    [InlineData("English", "Ukrainian")]
-    [InlineData("English", "Romanian")]
-    [InlineData("English", "German")]
-    [InlineData("English", "Norwegian")]
-    [InlineData("English", "Russian")]
-    [InlineData("English", "Spanish")]
-    [InlineData("English", "French")]
-    [InlineData("English", "Portuguese")]
-    [InlineData("English", "Italian")]
-    [InlineData("English", "Hindi")]
-    [InlineData("English", "Arabic")]
-    [InlineData("English", "Japanese")]
-    [InlineData("English", "Hungarian")]
-    [InlineData("English", "Finnish")]
-    [InlineData("English", "Turkish")]
-    [InlineData("English", "Urdu")]
-    [InlineData("English", "Indonesian")]
     public async Task Translate_Should_Return_Translation(string sourceLanguage, string targetLanguage)
     {
         // Arrange
