@@ -22,15 +22,19 @@ public class RocksoftAzureTranslatorTests
         await output.Should().ThrowAsync<Exception>().WithMessage("Unsupported language");
     }
     
-    [Fact]
-    public async Task Translate_Should_Return_Translation()
+    [Theory]
+    [InlineData("Polish", "English")]
+    [InlineData("English", "Polish")]
+    [InlineData("English", "Bangla")]
+    [InlineData("English", "Chinese")]
+    public async Task Translate_Should_Return_Translation(string sourceLanguage, string targetLanguage)
     {
         // Arrange
         await using ServiceProvider serviceProvider = Helpers.Services.CreateServiceCollection().BuildServiceProvider();
         var rocksoftTranslator = serviceProvider.GetRequiredService<RocksoftAzureTranslator>();
         
         // Act
-        var translation = await rocksoftTranslator.Translate("Test", "english", "polish");
+        var translation = await rocksoftTranslator.Translate("Test", sourceLanguage, targetLanguage);
         
         // Assert
         translation.Should().NotBeEmpty();
