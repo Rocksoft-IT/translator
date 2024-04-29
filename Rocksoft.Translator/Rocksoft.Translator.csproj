@@ -5,6 +5,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <EnablePackageValidation>true</EnablePackageValidation>
+        <Version>0.1.4</Version>
     </PropertyGroup>
 
     <ItemGroup>
